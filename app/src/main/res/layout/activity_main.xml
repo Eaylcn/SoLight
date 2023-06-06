@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/purple_white"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Light Status"
+                    android:layout_marginHorizontal="36dp"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/activityHeader"
+                    android:textSize="24sp"
+                    android:textAlignment="textStart"
+                    android:textStyle="bold"
+                    android:textColor="@color/d_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It's working for"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginHorizontal="36dp"
+                    android:id="@+id/activitySubHeader"
+                    android:textSize="16sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/w_purple"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8h 48m"
+                    android:layout_marginHorizontal="36dp"
+                    android:layout_marginBottom="16dp"
+                    android:id="@+id/activityInformation"
+                    android:textSize="36sp"
+                    android:textAlignment="textStart"
+                    android:textStyle="bold"
+                    android:textColor="@color/d_purple"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="32dp">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/turnOnOffButton"
+                    android:text="Turn On"
+                    android:drawableLeft="@drawable/ic_light_on"
+                    android:paddingLeft="8dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/purple2"
+                    app:cornerRadius="8dp"/>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/activityButton"
+                    android:text="Update"
+                    android:drawableLeft="@drawable/ic_update"
+                    android:paddingLeft="8dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/pink"
+                    app:cornerRadius="8dp"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="20dp"
+                android:background="@drawable/custom_edittext">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Light's Duration Chart"
+                        android:id="@+id/chartHeader"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:textStyle="bold"
+                        android:textColor="@color/d_purple"
+                        android:paddingBottom="8dp"/>
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/userList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/circularProgressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        app:cpb_background_progressbar_color="#b6bbd8"
+                        app:cpb_background_progressbar_width="10dp"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="#6C3FB5"
+                        app:cpb_progressbar_width="3dp"
+                        app:cpb_round_border="false"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Graphics and Informations"
+                android:layout_marginHorizontal="36dp"
+                android:textSize="18sp"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/d_purple"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="12dp">
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/option1"
+                    android:src="@drawable/menu_current"
+                    android:backgroundTint="@color/purple2"
+                    android:background="@drawable/menu_item_bg"/>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/option2"
+                    android:src="@drawable/menu_voltage"
+                    android:backgroundTint="@color/purple2"
+                    android:background="@drawable/menu_item_bg"/>
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/option3"
+                    android:src="@drawable/menu_resistance"
+                    android:backgroundTint="@color/purple2"
+                    android:background="@drawable/menu_item_bg"/>
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/option4"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/menu_item_bg"
+                    android:backgroundTint="@color/purple2"
+                    android:src="@drawable/menu_temperature" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="12dp">
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/option5"
+                    android:src="@drawable/menu_userlist"
+                    android:backgroundTint="@color/purple2"
+                    android:background="@drawable/menu_item_bg"/>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/option6"
+                    android:src="@drawable/menu_battery"
+                    android:backgroundTint="@color/purple2"
+                    android:background="@drawable/menu_item_bg"/>
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/option7"
+                    android:src="@drawable/menu_clock"
+                    android:backgroundTint="@color/purple2"
+                    android:background="@drawable/menu_item_bg"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_bottom_navigation"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@drawable/bottom_navigation_icon_color"
+        app:itemTextColor="@drawable/bottom_navigation_text_color"
+        style="@style/AppBottomNavigationStyle"/>
+
+</LinearLayout>

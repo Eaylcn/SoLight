@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "353427385484",
+    "project_id": "solight-mobile-app",
+    "storage_bucket": "solight-mobile-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353427385484:android:983de2da2593daf76e9fa9",
+        "android_client_info": {
+          "package_name": "com.example.solight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjXFIdC6DfYL8JHLHWsUzUrW4BOtyfcS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
